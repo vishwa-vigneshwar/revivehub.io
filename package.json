@@ -1,10 +1,9 @@
 {
   "name": "revivehub",
   "private": true,
-<<<<<<< HEAD
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://vishwa-vigneshwar.github.io/revivehub",
+  "homepage": "https://vishwa-vigneshwar.github.io/revivehub.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -19,10 +18,8 @@
     "react-router-dom": "^7.6.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.30.1",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.7.0",
+    "@eslint/js": "^9.30.1",
     "eslint": "^9.30.1",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
@@ -31,31 +28,3 @@
     "vite": "^7.0.0"
   }
 }
-=======
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "lucide-react": "^1.21.0",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
-    "react-router-dom": "^7.18.0"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.2",
-    "eslint": "^10.5.0",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.3",
-    "globals": "^17.6.0",
-    "vite": "^8.1.0"
-  }
-}
->>>>>>> 1f42338bf0c3783f7be5931289abce831000b3bc
