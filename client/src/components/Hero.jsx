@@ -2,8 +2,24 @@ import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Hero() {
+
+  const scrollToBooking = () => {
+    document.getElementById("booking")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const scrollToServices = () => {
+    document.getElementById("services")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <section className="relative overflow-hidden bg-[#050608] pt-28 pb-16 lg:min-h-screen lg:pt-0">
+
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-10 right-0 h-[350px] w-[350px] rounded-full bg-lime-500/10 blur-[120px] lg:h-[700px] lg:w-[700px] lg:blur-[180px]" />
@@ -19,6 +35,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-center lg:text-left"
         >
+
           <span className="rounded-full border border-lime-500/30 bg-lime-500/10 px-4 py-2 text-xs tracking-[3px] text-lime-400 sm:text-sm">
             DON'T SCRAP IT • REVIVE IT
           </span>
@@ -26,7 +43,9 @@ export default function Hero() {
           <h1 className="mt-6 text-5xl font-black leading-tight sm:text-6xl lg:mt-8 lg:text-8xl">
             Give Your
             <br />
-            <span className="text-lime-400">Electronics</span>
+            <span className="text-lime-400">
+              Electronics
+            </span>
             <br />
             A Second Life
           </h1>
@@ -38,15 +57,24 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
-            <button className="w-full rounded-2xl bg-lime-500 px-8 py-4 font-bold text-black transition hover:scale-105 sm:w-auto">
+
+            <button
+              onClick={scrollToBooking}
+              className="w-full rounded-2xl bg-lime-500 px-8 py-4 font-bold text-black transition duration-300 hover:scale-105 hover:shadow-[0_0_35px_rgba(163,255,18,.45)] sm:w-auto"
+            >
               Request Pickup
             </button>
 
-            <button className="flex w-full items-center justify-center gap-3 rounded-2xl border border-lime-500 px-8 py-4 transition hover:bg-lime-500 hover:text-black sm:w-auto">
+            <button
+              onClick={scrollToServices}
+              className="flex w-full items-center justify-center gap-3 rounded-2xl border border-lime-500 px-8 py-4 transition duration-300 hover:bg-lime-500 hover:text-black sm:w-auto"
+            >
               Explore Services
               <FaArrowRight />
             </button>
+
           </div>
+
         </motion.div>
 
         {/* RIGHT */}
@@ -56,6 +84,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="relative flex justify-center"
         >
+
           <div className="absolute h-[280px] w-[280px] rounded-full bg-lime-500/20 blur-[80px] sm:h-[400px] sm:w-[400px] lg:h-[550px] lg:w-[550px] lg:blur-[140px]" />
 
           <img
@@ -63,6 +92,7 @@ export default function Hero() {
             alt="ReviveHub"
             className="relative w-[75%] max-w-[450px] object-contain lg:w-full lg:max-w-[650px] drop-shadow-[0_0_80px_rgba(132,255,0,0.6)]"
           />
+
         </motion.div>
 
       </div>
@@ -72,6 +102,7 @@ export default function Hero() {
           REPAIR • REFURBISH • REUSE
         </p>
       </div>
+
     </section>
   );
 }
