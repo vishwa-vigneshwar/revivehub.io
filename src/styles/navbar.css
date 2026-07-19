@@ -1,0 +1,105 @@
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+padding:18px 0;
+transition:.35s;
+}
+
+.navbar.scrolled{
+background:rgba(10,15,25,.82);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:14px;
+}
+
+.logo-circle{
+width:52px;
+height:52px;
+border-radius:50%;
+display:grid;
+place-items:center;
+font-size:24px;
+background:#22C55E;
+}
+
+.logo h2{
+font-size:24px;
+font-family:"Space Grotesk";
+}
+
+.logo small{
+color:#94A3B8;
+}
+
+.nav-links{
+display:flex;
+gap:32px;
+align-items:center;
+}
+
+.nav-links a{
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+color:#22C55E;
+}
+
+.nav-btn{
+padding:14px 26px;
+border:none;
+border-radius:16px;
+background:#22C55E;
+color:white;
+font-weight:700;
+}
+
+.menu-btn{
+display:none;
+background:none;
+border:none;
+color:white;
+font-size:28px;
+}
+
+@media(max-width:900px){
+
+.menu-btn{
+display:block;
+}
+
+.nav-links{
+position:fixed;
+top:85px;
+right:-100%;
+width:280px;
+height:calc(100vh - 85px);
+background:#101B26;
+display:flex;
+flex-direction:column;
+padding:40px;
+transition:.35s;
+}
+
+.nav-links.active{
+right:0;
+}
+
+}
